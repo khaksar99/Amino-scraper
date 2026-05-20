@@ -1,1 +1,4 @@
-# Amino-scraper
+flask
+requests
+beautifulsoup4
+gunicorn
