@@ -9,14 +9,14 @@ def scrape():
     urls = data.get("threads", [])
     result = scrape_threads(urls)
     return jsonify(result)
+
 @app.route("/test", methods=["GET"])
 def test():
     return {"status": "ok"}
-    @app.route("/selftest", methods=["GET"])
+
+@app.route("/selftest", methods=["GET"])
 def selftest():
     import requests
     r = requests.post(
         "https://amino-scraper.onrender.com/scrape",
         json={"threads": ["https://forum.academywave.com/showthread.php?t=456"]}
-    )
-    return r.text
