@@ -20,3 +20,5 @@ def selftest():
     r = requests.post(
         "https://amino-scraper.onrender.com/scrape",
         json={"threads": ["https://forum.academywave.com/showthread.php?t=456"]}
+    )
+    return r.text
